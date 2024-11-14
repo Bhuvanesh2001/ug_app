@@ -1,12 +1,20 @@
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import MobileVerification from "./MobileVerification";
+import WelcomePage from "./WelcomePage";
+
 function App() {
     return (
-        <div className="bg-red-600">
-            <h1 className="text-3xl font-bold underline">
-                Hello world I am bhu
-            </h1>
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<WelcomePage />} />
+                <Route
+                    path="/MobileVerification"
+                    element={<MobileVerification />}
+                />
+            </Routes>
+        </BrowserRouter>
     );
 }
 
 export default App;
- 
